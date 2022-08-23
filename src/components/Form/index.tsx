@@ -1,21 +1,22 @@
 import React from "react";
 import { Button } from "../Button";
+import styles from './form.module.scss'
 
 export class Form extends React.Component {
   render() {
     return (
-      <form action="">
-        <div>
+      <form className={styles.newTask} action="">
+        <div className={styles.inputContainer}>
           <label htmlFor="task">Adicione um novo estudo:</label>
           <input
             type="text"
             name="task"
             id="task"
-            placeholder="o Que você quer estudar"
+            placeholder="O que você quer estudar"
             required
           />
         </div>
-        <div>
+        <div className={styles.inputContainer}>
           <label htmlFor="time">Tempo:</label>
           <input
             type="time"
